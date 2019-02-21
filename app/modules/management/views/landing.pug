@@ -1,0 +1,369 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Metronic - The Ultimate Bootstrap &amp; Angular 6 Admin Theme
+  meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+  meta(name='description' content='Metronic - #1 Selling Premium Bootstrap Admin Dashboard Theme of All Time. Build with Twitter Bootstrap 4, SASS, Angular 6. Trusted By Tens of Thousands Users.')
+  link(rel='canonical' href='https://keenthemes.com/')
+  meta(property='og:locale' content='en_US')
+  meta(property='og:type' content='website')
+  meta(property='og:title' content='Premium Bootstrap Admin Themes')
+  meta(property='og:description' content='Metronic - #1 Selling Premium Bootstrap Admin Theme of All Time. Build with Twitter Bootstrap 4, SASS, Angular 6. Trusted By Tens of Thousands Users.')
+  meta(property='og:url' content='https://keenthemes.com/')
+  meta(property='og:site_name' content='Keenthemes')
+  meta(property='article:publisher' content='https://www.facebook.com/keenthemes')
+  meta(name='twitter:card' content='summary_large_image')
+  meta(name='twitter:description' content='Metronic - #1 Selling Premium Bootstrap Admin Theme of All Time. Build with Twitter Bootstrap 4, SASS, Angular 6, Material Design. Trusted By Tens of Thousands Users.')
+  meta(name='twitter:title' content='Premium Bootstrap Admin Themes')
+  meta(name='twitter:domain' content='Keenthemes')
+  link(rel='shortcut icon' href='/pages/demo12/assets/favicon.ico')
+  link(href='/pages/demo12/assets/plugins/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css')
+  link(href='/pages/demo12/assets/plugins/lity/dist/lity.min.css' rel='stylesheet' type='text/css')
+  link(href='/pages/demo12/assets/style/flaticon.css' rel='stylesheet' type='text/css')
+  link(href='/pages/demo12/assets/plugins/line-awesome/css/line-awesome.min.css' rel='stylesheet' type='text/css')
+  link(href='/pages/demo12/assets/plugins/socicon/css/socicon.css' rel='stylesheet' type='text/css')
+  link(href='/pages/demo12/assets/plugins/filament-sticky/fixedsticky.css' rel='stylesheet' type='text/css')
+  link(href='/pages/demo12/assets/plugins/tether/dist/css/tether.min.css' rel='stylesheet' type='text/css')
+  link(href='/pages/demo12/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css' rel='stylesheet' type='text/css')
+  link(href='/pages/demo12/assets/style/style.css' rel='stylesheet' type='text/css')
+  script(src='/pages/demo12/assets/plugins/jquery/dist/jquery.min.js' type='application/javascript')
+  script(src='/pages/demo12/assets/plugins/tether/dist/js/tether.min.js' type='application/javascript')
+  script(src='/pages/demo12/assets/plugins/popper.js/dist/umd/popper.min.js' type='application/javascript')
+  script(src='/pages/demo12/assets/plugins/bootstrap/dist/js/bootstrap.min.js' type='application/javascript')
+  script(src='/pages/demo12/assets/plugins/lity/dist/lity.min.js' type='application/javascript')
+  script(src='/pages/demo12/assets/plugins/filament-fixed/fixedfixed.js' type='application/javascript')
+  script(src='/pages/demo12/assets/plugins/filament-sticky/fixedsticky.js' type='application/javascript')
+  script(src='/pages/demo12/assets/plugins/perfect-scrollbar/dist/perfect-scrollbar.js' type='application/javascript')
+  script(src='/pages/demo12/assets/js/custom.js' type='application/javascript')
+  link(href='/demos/default/assets/vendors/custom/datatables/datatables.bundle.css' rel='stylesheet' type='text/css')
+  // begin:: Global Mandatory Vendors
+  link(href='/vendors/perfect-scrollbar/css/perfect-scrollbar.css' rel='stylesheet' type='text/css')
+  // end:: Global Mandatory Vendors
+  // begin:: Global Optional Vendors
+  link(href='/vendors/tether/dist/css/tether.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-daterangepicker/daterangepicker.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-select/dist/css/bootstrap-select.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/select2/dist/css/select2.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/nouislider/distribute/nouislider.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/owl.carousel/dist/assets/owl.carousel.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/owl.carousel/dist/assets/owl.theme.default.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/ion-rangeslider/css/ion.rangeSlider.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/ion-rangeslider/css/ion.rangeSlider.skinFlat.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/dropzone/dist/dropzone.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/summernote/dist/summernote.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-markdown/css/bootstrap-markdown.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/animate.css/animate.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/toastr/build/toastr.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/jstree/dist/themes/default/style.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/morris.js/morris.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/chartist/dist/chartist.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/sweetalert2/dist/sweetalert2.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/socicon/css/socicon.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/vendors/line-awesome/css/line-awesome.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/vendors/flaticon/css/flaticon.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/vendors/metronic/css/styles.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/vendors/fontawesome5/css/all.min.css' rel='stylesheet' type='text/css')
+  // end:: Global Optional Vendors
+  // begin::Global Theme Styles
+  link(href='/pages/demo12/assets/demo/base/style.bundle.css' rel='stylesheet' type='text/css')
+  // RTL version:<link href="assets/demo/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
+  // end::Global Theme Styles
+  link(rel='shortcut icon' href='/pages/demo12/assets/demo/media/img/logo/favicon.ico')
+.wrapper
+  // wrapper
+  section.section.section--header
+    // section
+    header
+      // header
+      .content
+        .header__handler
+          .sidebar
+            span.hamburger
+              svg(xmlns='http://www.w3.org/2000/svg' version='1.1' viewbox='0 0 129 129' enable-background='new 0 0 129 129' width='40px' height='40px')
+                g
+                  path(d='m91.4,33.5h-53.8c-2.3,0-4.1,1.8-4.1,4.1 0,2.3 1.8,4.1 4.1,4.1h53.9c2.3,0 4.1-1.8 4.1-4.1-0.1-2.3-1.9-4.1-4.2-4.1z' fill='#FFFFFF')
+                  path(d='m91.4,87.4h-53.8c-2.3,0-4.1,1.8-4.1,4.1 0,2.3 1.8,4.1 4.1,4.1h53.9c2.3,0 4.1-1.8 4.1-4.1-0.1-2.3-1.9-4.1-4.2-4.1z' fill='#FFFFFF')
+                  path(d='m91.4,60.4h-53.8c-2.3,0-4.1,1.8-4.1,4.1 0,2.3 1.8,4.1 4.1,4.1h53.9c2.3,0 4.1-1.8 4.1-4.1-0.1-2.3-1.9-4.1-4.2-4.1z' fill='#FFFFFF')
+            .sidebar__menu_wrap
+              span.sidebar__menu_close x
+              ul.sidebar__menu
+                li.sidebar__menu__item.active
+                  a(href='index.html' target='' title='Preview')
+                    span Preview
+                li.sidebar__menu__item
+                  a(href='faq.html' target='' title='Faq')
+                    span Faq
+                li.sidebar__menu__item
+                  a(href='docs.html' target='' title='Docs')
+                    span Docs
+                li.sidebar__menu__item
+                  a(href='https://keenthemes.com/metronic/?page=github' target='_blank' title='GitHub Access')
+                    span GitHub Access
+                li.sidebar__menu__item
+                  a(href='reviews.html' target='' title='Reviews')
+                    span Reviews
+                li.sidebar__menu__item
+                  a(href='changelog.html' target='' title='Changelog')
+                    span Changelog
+                li.sidebar__menu__item
+                  a(href='https://keenthemes.com/metronic/?page=hireus' target='_blank' title='Hire Us')
+                    span Hire Us
+          a.metronic__logo(href='https://keenthemes.com')
+            img(src='/pages/demo12/assets/img/metronic_whitelogo.png' alt='Metronic')
+        .header__references
+          a.header__references_support(href='#' target='_blank') Support
+          a.header__references_purchase(data-toggle='modal' data-target='#qrModal') Scan A Code
+    // header END
+    .content
+      // content
+      .intro
+        // intro
+        img(src='/pages/demo12/assets/img/logo_metronic_1.png' alt='Metronic')
+        h2.intro__title We make your broken laptop back to life!
+        .intro__buttons
+          a.intro__video(href='www.youtube.com/watch?v=VIbMn0QHBlw' data-lity='')
+            span Watch Video
+            i.glyph-icon.flaticon-visible
+          .twitter__button.twitter__button
+            a.twitter-follow-button(href='https://twitter.com/keenthemes?ref_src=twsrc%5Etfw' data-size='large' data-show-screen-name='false')
+              | Follow @keenthemes
+            script(async='' src='https://platform.twitter.com/widgets.js' charset='utf-8')
+      // intro END
+    // content END
+  // section END
+  section.section.section--white
+    // section
+    .content.content--padding
+      .advantages
+        // advantages
+        .advantages__block
+          i.glyph-icon.flaticon-users
+          .advantages__block__content
+            h3 Pool of Professional Engineers
+            p
+              | Everyone within Top One is a certified engineer when it comes to your laptop issues.
+        .advantages__block
+          i.glyph-icon.flaticon-web
+          .advantages__block__content
+            h3 Almost All Devices
+            p
+              | Top One can repair almost all brands, series, and models of current laptops up-to-date.
+        .advantages__block
+          i.glyph-icon.flaticon-layers
+          .advantages__block__content
+            h3 Satisfactory Service
+            p
+              | A huge variety of services available almost to all issues your laptop has!
+      // grid__advantages END
+  // section END
+  section.section.section--bg
+    // section
+    .content
+      h2.title.text-center The Most Trusted Repair Service in Metro Manila.
+      .text-center
+        a.button(href='https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes' target='_blank') PURCHASE NOW
+  // section END
+  footer
+    img(src='/pages/demo12/assets/img/logo_keenthemes_2.png' alt='')
+    form#mc-embedded-subscribe-form.validate(action='//keenthemes.us3.list-manage.com/subscribe/post?u=b10f23244c11e2946463ea844&id=3aba0b6220' method='post' name='mc-embedded-subscribe-form' target='_blank' novalidate='')
+      .subscribe
+        input(type='email' name='EMAIL' placeholder='Enter your email to subscribe newsletter')
+        button(type='submit' name='subscribe') Submit
+    .socials
+      a(href='http://twitter.com/keenthemes' target='_blank')
+        i.socicon-twitter
+      a(href='http://facebook.com/keenthemes' target='_blank')
+        i.socicon-facebook
+      a(href='https://dribbble.com/keenthemes' target='_blank')
+        i.socicon-dribbble
+      a(href='http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes' target='_blank')
+        i.socicon-envato(alt='')
+  #qrModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title Scan QR Code
+          video#qrscanner(width="400px" style="border: 3px solid blue;")
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+          .m-alert.m-alert--icon.m-alert--outline-2x.alert.alert-success.alert-dismissible.fade.show(role='alert')
+            .m-alert__icon
+              i.la.la-warning
+            .m-alert__text
+              strong Well done!
+              |  Scan your QR Code here. 
+  #add_brand.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-header
+          h5#exampleModalLabel.modal-title Device Information
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+          .progress
+            .progress-bar.progress-bar-striped(role='progressbar' style='width: 10%' aria-valuenow='10' aria-valuemin='0' aria-valuemax='100')
+          table.table
+            tbody
+              tr
+                th
+                  | Brand
+                td#brand ASUS
+              tr
+                th
+                  | Series
+                td#series Chromebook
+            tr
+                th
+                  | Model
+                td#model Chromebook
+            tr
+                th
+                  | Processor
+                td#processor Intel
+            tr
+                th
+                  | Memory Capacity
+                td#memoryCapacity 32GB
+            tr
+                th
+                  | Memory
+                td#memory DDR
+            tr
+                th Storage Capacity
+                td#storageCapacity 32GB
+            tr
+                th Inspection Detail
+                td#inspectionDetail HHTHH
+            
+          .m-alert.m-alert--icon.m-alert--outline-2x.alert.alert-success.alert-dismissible.fade.show(role='alert')
+            .m-alert__icon
+              i.la.la-warning
+            .m-alert__text
+              strong Well done!
+              |  You successfully read this message.
+// wrapper END
+// begin:: Global Mandatory Vendors
+script(src='/vendors/jquery/dist/jquery.js' type='text/javascript')
+script(src='/vendors/popper.js/dist/umd/popper.js' type='text/javascript')
+script(src='/vendors/bootstrap/dist/js/bootstrap.min.js' type='text/javascript')
+script(src='/vendors/js-cookie/src/js.cookie.js' type='text/javascript')
+script(src='/vendors/moment/min/moment.min.js' type='text/javascript')
+script(src='/vendors/tooltip.js/dist/umd/tooltip.min.js' type='text/javascript')
+script(src='/vendors/perfect-scrollbar/dist/perfect-scrollbar.js' type='text/javascript')
+script(src='/vendors/wnumb/wNumb.js' type='text/javascript')
+// end:: Global Mandatory Vendors
+// begin:: Global Optional Vendors
+script(src='/vendors/jquery.repeater/src/lib.js' type='text/javascript')
+script(src='/vendors/jquery.repeater/src/jquery.input.js' type='text/javascript')
+script(src='/vendors/jquery.repeater/src/repeater.js' type='text/javascript')
+script(src='/vendors/jquery-form/dist/jquery.form.min.js' type='text/javascript')
+script(src='/vendors/block-ui/jquery.blockUI.js' type='text/javascript')
+script(src='/vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-datepicker.init.js' type='text/javascript')
+script(src='/vendors/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js' type='text/javascript')
+script(src='/vendors/bootstrap-timepicker/js/bootstrap-timepicker.min.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-timepicker.init.js' type='text/javascript')
+script(src='/vendors/bootstrap-daterangepicker/daterangepicker.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-daterangepicker.init.js' type='text/javascript')
+script(src='/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js' type='text/javascript')
+script(src='/vendors/bootstrap-maxlength/src/bootstrap-maxlength.js' type='text/javascript')
+script(src='/vendors/bootstrap-switch/dist/js/bootstrap-switch.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-switch.init.js' type='text/javascript')
+script(src='/vendors/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js' type='text/javascript')
+script(src='/vendors/bootstrap-select/dist/js/bootstrap-select.js' type='text/javascript')
+script(src='/vendors/select2/dist/js/select2.full.js' type='text/javascript')
+script(src='/vendors/typeahead.js/dist/typeahead.bundle.js' type='text/javascript')
+script(src='/vendors/handlebars/dist/handlebars.js' type='text/javascript')
+script(src='/vendors/inputmask/dist/jquery.inputmask.bundle.js' type='text/javascript')
+script(src='/vendors/inputmask/dist/inputmask/inputmask.date.extensions.js' type='text/javascript')
+script(src='/vendors/inputmask/dist/inputmask/inputmask.numeric.extensions.js' type='text/javascript')
+script(src='/vendors/inputmask/dist/inputmask/inputmask.phone.extensions.js' type='text/javascript')
+script(src='/vendors/nouislider/distribute/nouislider.js' type='text/javascript')
+script(src='/vendors/owl.carousel/dist/owl.carousel.js' type='text/javascript')
+script(src='/vendors/autosize/dist/autosize.js' type='text/javascript')
+script(src='/vendors/clipboard/dist/clipboard.min.js' type='text/javascript')
+script(src='/vendors/ion-rangeslider/js/ion.rangeSlider.js' type='text/javascript')
+script(src='/vendors/dropzone/dist/dropzone.js' type='text/javascript')
+script(src='/vendors/summernote/dist/summernote.js' type='text/javascript')
+script(src='/vendors/markdown/lib/markdown.js' type='text/javascript')
+script(src='/vendors/bootstrap-markdown/js/bootstrap-markdown.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-markdown.init.js' type='text/javascript')
+script(src='/vendors/jquery-validation/dist/jquery.validate.js' type='text/javascript')
+script(src='/vendors/jquery-validation/dist/additional-methods.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/jquery-validation.init.js' type='text/javascript')
+script(src='/vendors/bootstrap-notify/bootstrap-notify.min.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/base/bootstrap-notify.init.js' type='text/javascript')
+script(src='/vendors/toastr/build/toastr.min.js' type='text/javascript')
+script(src='/vendors/jstree/dist/jstree.js' type='text/javascript')
+script(src='/vendors/raphael/raphael.js' type='text/javascript')
+script(src='/vendors/morris.js/morris.js' type='text/javascript')
+script(src='/vendors/chartist/dist/chartist.js' type='text/javascript')
+script(src='/vendors/chart.js/dist/Chart.bundle.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/charts/chart.init.js' type='text/javascript')
+script(src='/vendors/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js' type='text/javascript')
+script(src='/vendors/vendors/jquery-idletimer/idle-timer.min.js' type='text/javascript')
+script(src='/vendors/waypoints/lib/jquery.waypoints.js' type='text/javascript')
+script(src='/vendors/counterup/jquery.counterup.js' type='text/javascript')
+script(src='/vendors/es6-promise-polyfill/promise.min.js' type='text/javascript')
+script(src='/vendors/sweetalert2/dist/sweetalert2.min.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/base/sweetalert2.init.js' type='text/javascript')
+// end:: Global Optional Vendors
+// begin::Global Theme Bundle
+script(src='/pages/demo12/assets/demo/base/scripts.bundle.js' type='text/javascript')
+script(src='/vendors/is.js' type='text/javascript')
+// end::Global Theme Bundle
+// begin::Page Vendors
+script(src='/default/assets/vendors/custom/datatables/datatables.bundle.js' type='text/javascript')
+script.
+    $(document).ready(function(){
+        $('#qrModal').on('hidden.bs.modal', function () {
+            $('#add_brand').modal('toggle');
+            
+        })
+
+        $('#qrModal').on('shown.bs.modal', function () {
+            
+            var scanner = new Instascan.Scanner({ video: document.getElementById('qrscanner') });
+                scanner.addListener('scan', function (content, image) {
+                    strCode = content;
+                    $.post('/management/device/information', {
+                        strCode: content,
+                    }).done(function(data){
+                        if(data.message == 'Success'){
+                            scanner.stop();
+                            $('#qrModal').modal('hide');
+
+                            console.log(data.devices);
+
+                            $('#brand').text(data.devices.strBrand)
+                            $('#model').text(data.devices.strModel)
+                            $('#series').text(data.devices.strSeries)
+                            $('#processor').text(data.devices.strProcessor)
+                            $('#memoryCapacity').text(data.devices.strMemoryCapacity)
+                            $('#memory').text(data.devices.strMemoryType)
+                            $('#storageCapacity').text(data.devices.strStorageCapacity)
+                            $('#inspectionDetail').text(data.devices.strInspectionDetail)
+
+                        }
+                        else{
+                            swal({
+                                title: 'No Device Found!',
+                                icon: 'error',
+                                button: 'Okay',
+                            })
+                        }
+                    })
+                });
+                Instascan.Camera.getCameras().then(function (cameras) {
+                    if (cameras.length > 0) {
+                        scanner.start(cameras[0]);
+                    }
+                });
+        })
+    })

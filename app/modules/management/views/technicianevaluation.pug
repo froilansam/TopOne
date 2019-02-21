@@ -1,0 +1,1443 @@
+doctype html
+//
+  Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
+  Author: KeenThemes
+  Website: http://www.keenthemes.com/
+  Contact: support@keenthemes.com
+  Follow: www.twitter.com/keenthemes
+  Dribbble: www.dribbble.com/keenthemes
+  Like: www.facebook.com/keenthemes
+  Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+  Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+  License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+// begin::Head
+head
+  meta(charset='utf-8')
+  title Metronic | Dashboard
+  meta(name='description' content='Latest updates and statistic charts')
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no')
+  // begin::Web font
+  script(src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js')
+  script.
+    WebFont.load({
+    google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+    active: function() {
+    sessionStorage.fonts = true;
+    }
+    });
+  // end::Web font
+  // begin:: Global Mandatory Vendors
+  link(href='/vendors/perfect-scrollbar/css/perfect-scrollbar.css' rel='stylesheet' type='text/css')
+  // end:: Global Mandatory Vendors
+  // begin:: Global Optional Vendors
+  link(href='/vendors/tether/dist/css/tether.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-datetime-picker/css/bootstrap-datetimepicker.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-daterangepicker/daterangepicker.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-select/dist/css/bootstrap-select.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/select2/dist/css/select2.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/nouislider/distribute/nouislider.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/owl.carousel/dist/assets/owl.carousel.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/owl.carousel/dist/assets/owl.theme.default.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/ion-rangeslider/css/ion.rangeSlider.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/ion-rangeslider/css/ion.rangeSlider.skinFlat.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/dropzone/dist/dropzone.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/summernote/dist/summernote.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/bootstrap-markdown/css/bootstrap-markdown.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/animate.css/animate.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/toastr/build/toastr.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/jstree/dist/themes/default/style.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/morris.js/morris.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/chartist/dist/chartist.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/sweetalert2/dist/sweetalert2.min.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/socicon/css/socicon.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/vendors/line-awesome/css/line-awesome.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/vendors/flaticon/css/flaticon.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/vendors/metronic/css/styles.css' rel='stylesheet' type='text/css')
+  link(href='/vendors/vendors/fontawesome5/css/all.min.css' rel='stylesheet' type='text/css')
+  // end:: Global Optional Vendors
+  // begin::Global Theme Styles
+  link(href='/pages/demo12/assets/demo/base/style.bundle.css' rel='stylesheet' type='text/css')
+  // RTL version:<link href="assets/demo/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />
+  // end::Global Theme Styles
+  // begin::Page Vendors Styles
+  link(href='/pages/demo12/assets/vendors/custom/fullcalendar/fullcalendar.bundle.css' rel='stylesheet' type='text/css')
+  link(href='/default/assets/vendors/custom/datatables/datatables.bundle.css' rel='stylesheet' type='text/css')
+  
+  // RTL version:<link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css" />
+  // end::Page Vendors Styles
+  link(rel='shortcut icon' href='/pages/demo12/assets/demo/media/img/logo/favicon.ico')
+  style.
+    .pdfobject-container { height: 40rem; border: 1rem solid rgba(0,0,0,.1); }
+    @media (min-width: 768px) {
+      .modal-xl {
+        width: 90%;
+        max-width:1200px;
+      }
+    }
+// end::Head
+// begin::Body
+// begin:: Page
+.m-grid.m-grid--hor.m-grid--root.m-page
+  // BEGIN: Header
+  header#m_header.m-grid__item.m-header(m-minimize-offset='200' m-minimize-mobile-offset='200')
+    .m-container.m-container--fluid.m-container--full-height
+      .m-stack.m-stack--ver.m-stack--desktop
+        // BEGIN: Brand
+        .m-stack__item.m-brand.m-brand--skin-dark
+          .m-stack.m-stack--ver.m-stack--general
+            .m-stack__item.m-stack__item--middle.m-brand__logo
+              a.m-brand__logo-wrapper(href='index.html')
+                img(alt='' src='/pages/demo12/assets/demo/media/img/logo/logo.png')
+            .m-stack__item.m-stack__item--middle.m-brand__tools
+              // BEGIN: Left Aside Minimize Toggle
+              a#m_aside_left_minimize_toggle.m-brand__icon.m-brand__toggler.m-brand__toggler--left.m--visible-desktop-inline-block(href='javascript:;')
+                span
+              // END
+              // BEGIN: Responsive Aside Left Menu Toggler
+              a#m_aside_left_offcanvas_toggle.m-brand__icon.m-brand__toggler.m-brand__toggler--left.m--visible-tablet-and-mobile-inline-block(href='javascript:;')
+                span
+              // END
+              // BEGIN: Responsive Header Menu Toggler
+              a#m_aside_header_menu_mobile_toggle.m-brand__icon.m-brand__toggler.m--visible-tablet-and-mobile-inline-block(href='javascript:;')
+                span
+              // END
+              // BEGIN: Topbar Toggler
+              a#m_aside_header_topbar_mobile_toggle.m-brand__icon.m--visible-tablet-and-mobile-inline-block(href='javascript:;')
+                i.flaticon-more
+              // BEGIN: Topbar Toggler
+        // END: Brand
+        #m_header_nav.m-stack__item.m-stack__item--fluid.m-header-head
+          // BEGIN: Horizontal Menu
+          button#m_aside_header_menu_mobile_close_btn.m-aside-header-menu-mobile-close.m-aside-header-menu-mobile-close--skin-dark
+            i.la.la-close
+          #m_header_menu.m-header-menu.m-aside-header-menu-mobile.m-aside-header-menu-mobile--offcanvas.m-header-menu--skin-dark.m-header-menu--submenu-skin-light.m-aside-header-menu-mobile--skin-dark.m-aside-header-menu-mobile--submenu-skin-dark
+            ul.m-menu__nav
+              li.m-menu__item.m-menu__item--submenu.m-menu__item--rel(m-menu-submenu-toggle='click' m-menu-link-redirect='1' aria-haspopup='true')
+                a.m-menu__link.m-menu__toggle(href='javascript:;' title='Non functional dummy link')
+                  i.m-menu__link-icon.flaticon-add
+                  span.m-menu__link-text Actions
+                  i.m-menu__hor-arrow.la.la-angle-down
+                  i.m-menu__ver-arrow.la.la-angle-right
+                .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--left
+                  ul.m-menu__subnav
+                    li.m-menu__item(aria-haspopup='true')
+                      a.m-menu__link(href='actions.html')
+                        i.m-menu__link-icon.flaticon-file
+                        span.m-menu__link-text Create New Post
+                    li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link(href='actions.html')
+                        i.m-menu__link-icon.flaticon-diagram
+                        span.m-menu__link-title
+                          span.m-menu__link-wrap
+                            span.m-menu__link-text Generate Reports
+                            span.m-menu__link-badge
+                              span.m-badge.m-badge--success 2
+                    li.m-menu__item.m-menu__item--submenu(m-menu-submenu-toggle='hover' m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link.m-menu__toggle(href='javascript:;' title='Non functional dummy link')
+                        i.m-menu__link-icon.flaticon-business
+                        span.m-menu__link-text Manage Orders
+                        i.m-menu__hor-arrow.la.la-angle-right
+                        i.m-menu__ver-arrow.la.la-angle-right
+                      .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--right
+                        span.m-menu__arrow
+                        ul.m-menu__subnav
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Latest Orders
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Pending Orders
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Processed Orders
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Delivery Reports
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Payments
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Customers
+                    li.m-menu__item.m-menu__item--submenu(m-menu-submenu-toggle='hover' m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link.m-menu__toggle(href='#')
+                        i.m-menu__link-icon.flaticon-chat-1
+                        span.m-menu__link-text
+                          | Customer
+                          | Feedbacks
+                        i.m-menu__hor-arrow.la.la-angle-right
+                        i.m-menu__ver-arrow.la.la-angle-right
+                      .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--right
+                        span.m-menu__arrow
+                        ul.m-menu__subnav
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Customer Feedbacks
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Supplier Feedbacks
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Reviewed Feedbacks
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Resolved Feedbacks
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Feedback Reports
+                    li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link(href='actions.html')
+                        i.m-menu__link-icon.flaticon-users
+                        span.m-menu__link-text Register Member
+              li.m-menu__item.m-menu__item--submenu.m-menu__item--rel(m-menu-submenu-toggle='click' m-menu-link-redirect='1' aria-haspopup='true')
+                a.m-menu__link.m-menu__toggle(href='javascript:;' title='Non functional dummy link')
+                  i.m-menu__link-icon.flaticon-line-graph
+                  span.m-menu__link-text Reports
+                  i.m-menu__hor-arrow.la.la-angle-down
+                  i.m-menu__ver-arrow.la.la-angle-right
+                .m-menu__submenu.m-menu__submenu--fixed.m-menu__submenu--left(style='width:1000px')
+                  .m-menu__subnav
+                    ul.m-menu__content
+                      li.m-menu__item
+                        h3.m-menu__heading.m-menu__toggle
+                          span.m-menu__link-text Finance Reports
+                          i.m-menu__ver-arrow.la.la-angle-right
+                        ul.m-menu__inner
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-map
+                              span.m-menu__link-text Annual Reports
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-user
+                              span.m-menu__link-text HR Reports
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-clipboard
+                              span.m-menu__link-text IPO Reports
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-graphic-1
+                              span.m-menu__link-text Finance Margins
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-graphic-2
+                              span.m-menu__link-text Revenue Reports
+                      li.m-menu__item
+                        h3.m-menu__heading.m-menu__toggle
+                          span.m-menu__link-text Project Reports
+                          i.m-menu__ver-arrow.la.la-angle-right
+                        ul.m-menu__inner
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--line
+                                span
+                              span.m-menu__link-text
+                                | Coca Cola
+                                | CRM
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--line
+                                span
+                              span.m-menu__link-text
+                                | Delta
+                                | Airlines Booking Site
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--line
+                                span
+                              span.m-menu__link-text
+                                | Malibu
+                                | Accounting
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--line
+                                span
+                              span.m-menu__link-text
+                                | Vineseed
+                                | Website Rewamp
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--line
+                                span
+                              span.m-menu__link-text
+                                | Zircon
+                                | Mobile App
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--line
+                                span
+                              span.m-menu__link-text Mercury CMS
+                      li.m-menu__item
+                        h3.m-menu__heading.m-menu__toggle
+                          span.m-menu__link-text HR Reports
+                          i.m-menu__ver-arrow.la.la-angle-right
+                        ul.m-menu__inner
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--dot
+                                span
+                              span.m-menu__link-text
+                                | Staff
+                                | Directory
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--dot
+                                span
+                              span.m-menu__link-text
+                                | Client
+                                | Directory
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--dot
+                                span
+                              span.m-menu__link-text
+                                | Salary
+                                | Reports
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--dot
+                                span
+                              span.m-menu__link-text
+                                | Staff
+                                | Payslips
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--dot
+                                span
+                              span.m-menu__link-text
+                                | Corporate
+                                | Expenses
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-bullet.m-menu__link-bullet--dot
+                                span
+                              span.m-menu__link-text
+                                | Project
+                                | Expenses
+                      li.m-menu__item
+                        h3.m-menu__heading.m-menu__toggle
+                          span.m-menu__link-text Reporting Apps
+                          i.m-menu__ver-arrow.la.la-angle-right
+                        ul.m-menu__inner
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Report Adjusments
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Sources &amp; Mediums
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Reporting Settings
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Conversions
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Report Flows
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              span.m-menu__link-text Audit &amp; Logs
+              li.m-menu__item.m-menu__item--submenu.m-menu__item--rel(m-menu-submenu-toggle='click' m-menu-link-redirect='1' aria-haspopup='true')
+                a.m-menu__link.m-menu__toggle(href='javascript:;' title='Non functional dummy link')
+                  i.m-menu__link-icon.flaticon-paper-plane
+                  span.m-menu__link-title
+                    span.m-menu__link-wrap
+                      span.m-menu__link-text Apps
+                      span.m-menu__link-badge
+                        span.m-badge.m-badge--brand.m-badge--wide new
+                  i.m-menu__hor-arrow.la.la-angle-down
+                  i.m-menu__ver-arrow.la.la-angle-right
+                .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--left
+                  ul.m-menu__subnav
+                    li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link(href='actions.html')
+                        i.m-menu__link-icon.flaticon-business
+                        span.m-menu__link-text eCommerce
+                    li.m-menu__item.m-menu__item--submenu(m-menu-submenu-toggle='hover' m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link.m-menu__toggle(href='crud/datatable_v1.html')
+                        i.m-menu__link-icon.flaticon-computer
+                        span.m-menu__link-text Audience
+                        i.m-menu__hor-arrow.la.la-angle-right
+                        i.m-menu__ver-arrow.la.la-angle-right
+                      .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--right
+                        span.m-menu__arrow
+                        ul.m-menu__subnav
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-users
+                              span.m-menu__link-text Active Users
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-interface-1
+                              span.m-menu__link-text User Explorer
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-lifebuoy
+                              span.m-menu__link-text Users Flows
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-graphic-1
+                              span.m-menu__link-text Market Segments
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-graphic
+                              span.m-menu__link-text User Reports
+                    li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link(href='actions.html')
+                        i.m-menu__link-icon.flaticon-map
+                        span.m-menu__link-text Marketing
+                    li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link(href='actions.html')
+                        i.m-menu__link-icon.flaticon-graphic-2
+                        span.m-menu__link-title
+                          span.m-menu__link-wrap
+                            span.m-menu__link-text Campaigns
+                            span.m-menu__link-badge
+                              span.m-badge.m-badge--success 3
+                    li.m-menu__item.m-menu__item--submenu(m-menu-submenu-toggle='hover' m-menu-link-redirect='1' aria-haspopup='true')
+                      a.m-menu__link.m-menu__toggle(href='javascript:;' title='Non functional dummy link')
+                        i.m-menu__link-icon.flaticon-infinity
+                        span.m-menu__link-text Cloud Manager
+                        i.m-menu__hor-arrow.la.la-angle-right
+                        i.m-menu__ver-arrow.la.la-angle-right
+                      .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--left
+                        span.m-menu__arrow
+                        ul.m-menu__subnav
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-add
+                              span.m-menu__link-title
+                                span.m-menu__link-wrap
+                                  span.m-menu__link-text File Upload
+                                  span.m-menu__link-badge
+                                    span.m-badge.m-badge--danger 3
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-signs-1
+                              span.m-menu__link-text File Attributes
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-folder
+                              span.m-menu__link-text Folders
+                          li.m-menu__item(m-menu-link-redirect='1' aria-haspopup='true')
+                            a.m-menu__link(href='actions.html')
+                              i.m-menu__link-icon.flaticon-cogwheel-2
+                              span.m-menu__link-text System Settings
+          // END: Horizontal Menu
+          // BEGIN: Topbar
+          #m_header_topbar.m-topbar.m-stack.m-stack--ver.m-stack--general
+            .m-stack__item.m-topbar__nav-wrapper
+              ul.m-topbar__nav.m-nav.m-nav--inline
+                li#m_quicksearch.m-nav__item.m-dropdown.m-dropdown--large.m-dropdown--arrow.m-dropdown--align-center.m-dropdown--mobile-full-width.m-dropdown--skin-light.m-list-search.m-list-search--skin-light(m-dropdown-toggle='click' m-quicksearch-mode='dropdown' m-dropdown-persistent='1')
+                  a.m-nav__link.m-dropdown__toggle(href='#')
+                    span.m-nav__link-icon
+                      span.m-nav__link-icon-wrapper
+                        i.flaticon-search-1
+                  .m-dropdown__wrapper
+                    span.m-dropdown__arrow.m-dropdown__arrow--center
+                    .m-dropdown__inner
+                      .m-dropdown__header
+                        form.m-list-search__form
+                          .m-list-search__form-wrapper
+                            span.m-list-search__form-input-wrapper
+                              input#m_quicksearch_input.m-list-search__form-input(autocomplete='off' type='text' name='q' value='' placeholder='Search...')
+                            span#m_quicksearch_close.m-list-search__form-icon-close
+                              i.la.la-remove
+                      .m-dropdown__body
+                        .m-dropdown__scrollable.m-scrollable(data-scrollable='true' data-height='300' data-mobile-height='200')
+                          .m-dropdown__content
+                li.m-nav__item.m-topbar__notifications.m-dropdown.m-dropdown--large.m-dropdown--arrow.m-dropdown--align-center.m-dropdown--mobile-full-width(m-dropdown-toggle='click' m-dropdown-persistent='1')
+                  a#m_topbar_notification_icon.m-nav__link.m-dropdown__toggle(href='#')
+                    span.m-nav__link-icon
+                      span.m-nav__link-icon-wrapper
+                        i.flaticon-alarm
+                      span.m-nav__link-badge.m-badge.m-badge--danger 3
+                  .m-dropdown__wrapper
+                    span.m-dropdown__arrow.m-dropdown__arrow--center
+                    .m-dropdown__inner
+                      .m-dropdown__header.m--align-center
+                        span.m-dropdown__header-title 9 New
+                        span.m-dropdown__header-subtitle User Notifications
+                      .m-dropdown__body
+                        .m-dropdown__content
+                          ul.nav.nav-tabs.m-tabs.m-tabs-line.m-tabs-line--brand(role='tablist')
+                            li.nav-item.m-tabs__item
+                              a.nav-link.m-tabs__link.active(data-toggle='tab' href='#topbar_notifications_notifications' role='tab')
+                                | Alerts
+                            li.nav-item.m-tabs__item
+                              a.nav-link.m-tabs__link(data-toggle='tab' href='#topbar_notifications_events' role='tab') Events
+                            li.nav-item.m-tabs__item
+                              a.nav-link.m-tabs__link(data-toggle='tab' href='#topbar_notifications_logs' role='tab') Logs
+                          .tab-content
+                            #topbar_notifications_notifications.tab-pane.active(role='tabpanel')
+                              .m-scrollable(data-scrollable='true' data-height='250' data-mobile-height='200')
+                                .m-list-timeline.m-list-timeline--skin-light
+                                  .m-list-timeline__items
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge.-m-list-timeline__badge--state-success
+                                      span.m-list-timeline__text 12 new users registered
+                                      span.m-list-timeline__time Just now
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge
+                                      span.m-list-timeline__text
+                                        | System shutdown 
+                                        span.m-badge.m-badge--success.m-badge--wide pending
+                                      span.m-list-timeline__time 14 mins
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge
+                                      span.m-list-timeline__text New invoice received
+                                      span.m-list-timeline__time 20 mins
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge
+                                      span.m-list-timeline__text
+                                        | DB overloaded 80% 
+                                        span.m-badge.m-badge--info.m-badge--wide settled
+                                      span.m-list-timeline__time 1 hr
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge
+                                      span.m-list-timeline__text
+                                        | System error - 
+                                        a.m-link(href='#') Check
+                                      span.m-list-timeline__time 2 hrs
+                                    .m-list-timeline__item.m-list-timeline__item--read
+                                      span.m-list-timeline__badge
+                                      span.m-list-timeline__text(href='')
+                                        | New order received 
+                                        span.m-badge.m-badge--danger.m-badge--wide urgent
+                                      span.m-list-timeline__time 7 hrs
+                                    .m-list-timeline__item.m-list-timeline__item--read
+                                      span.m-list-timeline__badge
+                                      span.m-list-timeline__text Production server down
+                                      span.m-list-timeline__time 3 hrs
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge
+                                      span.m-list-timeline__text Production server up
+                                      span.m-list-timeline__time 5 hrs
+                            #topbar_notifications_events.tab-pane(role='tabpanel')
+                              .m-scrollable(data-scrollable='true' data-height='250' data-mobile-height='200')
+                                .m-list-timeline.m-list-timeline--skin-light
+                                  .m-list-timeline__items
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge.m-list-timeline__badge--state1-success
+                                      a.m-list-timeline__text(href='') New order received
+                                      span.m-list-timeline__time Just now
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge.m-list-timeline__badge--state1-danger
+                                      a.m-list-timeline__text(href='') New invoice received
+                                      span.m-list-timeline__time 20 mins
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge.m-list-timeline__badge--state1-success
+                                      a.m-list-timeline__text(href='') Production server up
+                                      span.m-list-timeline__time 5 hrs
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge.m-list-timeline__badge--state1-info
+                                      a.m-list-timeline__text(href='') New order received
+                                      span.m-list-timeline__time 7 hrs
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge.m-list-timeline__badge--state1-info
+                                      a.m-list-timeline__text(href='') System shutdown
+                                      span.m-list-timeline__time 11 mins
+                                    .m-list-timeline__item
+                                      span.m-list-timeline__badge.m-list-timeline__badge--state1-info
+                                      a.m-list-timeline__text(href='') Production server down
+                                      span.m-list-timeline__time 3 hrs
+                            #topbar_notifications_logs.tab-pane(role='tabpanel')
+                              .m-stack.m-stack--ver.m-stack--general(style='min-height: 180px;')
+                                .m-stack__item.m-stack__item--center.m-stack__item--middle
+                                  span
+                                    | All caught up!
+                                    br
+                                    | No new logs.
+                li.m-nav__item.m-topbar__quick-actions.m-dropdown.m-dropdown--skin-light.m-dropdown--large.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--align-push.m-dropdown--mobile-full-width.m-dropdown--skin-light(m-dropdown-toggle='click')
+                  a.m-nav__link.m-dropdown__toggle(href='#')
+                    span.m-nav__link-icon
+                      span.m-nav__link-icon-wrapper
+                        i.flaticon-share
+                      span.m-nav__link-badge.m-badge.m-badge--accent 5
+                  .m-dropdown__wrapper
+                    span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+                    .m-dropdown__inner
+                      .m-dropdown__header.m--align-center
+                        span.m-dropdown__header-title Quick Actions
+                        span.m-dropdown__header-subtitle Shortcuts
+                      .m-dropdown__body.m-dropdown__body--paddingless
+                        .m-dropdown__content
+                          .m-scrollable(data-scrollable='false' data-height='380' data-mobile-height='200')
+                            .m-nav-grid.m-nav-grid--skin-light
+                              .m-nav-grid__row
+                                a.m-nav-grid__item(href='#')
+                                  i.m-nav-grid__icon.flaticon-file
+                                  span.m-nav-grid__text Generate Report
+                                a.m-nav-grid__item(href='#')
+                                  i.m-nav-grid__icon.flaticon-time
+                                  span.m-nav-grid__text Add New Event
+                              .m-nav-grid__row
+                                a.m-nav-grid__item(href='#')
+                                  i.m-nav-grid__icon.flaticon-folder
+                                  span.m-nav-grid__text Create New Task
+                                a.m-nav-grid__item(href='#')
+                                  i.m-nav-grid__icon.flaticon-clipboard
+                                  span.m-nav-grid__text Completed Tasks
+                li.m-nav__item.m-topbar__user-profile.m-dropdown.m-dropdown--medium.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--mobile-full-width.m-dropdown--skin-light(m-dropdown-toggle='click')
+                  a.m-nav__link.m-dropdown__toggle(href='#')
+                    span.m-topbar__userpic
+                      img.m--img-rounded.m--marginless.m--img-centered(src='/pages/demo12/assets/app/media/img/users/user4.jpg' alt='')
+                    span.m-nav__link-icon.m-topbar__usericon.m--hide
+                      span.m-nav__link-icon-wrapper
+                        i.flaticon-user-ok
+                    span.m-topbar__username.m--hide Nick
+                  .m-dropdown__wrapper
+                    span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+                    .m-dropdown__inner
+                      .m-dropdown__header.m--align-center
+                        .m-card-user.m-card-user--skin-light
+                          .m-card-user__pic
+                            img.m--img-rounded.m--marginless(src='/pages/demo12/assets/app/media/img/users/user4.jpg' alt='')
+                          .m-card-user__details
+                            span.m-card-user__name.m--font-weight-500 Mark Andre
+                            a.m-card-user__email.m--font-weight-300.m-link(href='') mark.andre@gmail.com
+                      .m-dropdown__body
+                        .m-dropdown__content
+                          ul.m-nav.m-nav--skin-light
+                            li.m-nav__section.m--hide
+                              span.m-nav__section-text Section
+                            li.m-nav__item
+                              a.m-nav__link(href='profile.html')
+                                i.m-nav__link-icon.flaticon-profile-1
+                                span.m-nav__link-title
+                                  span.m-nav__link-wrap
+                                    span.m-nav__link-text My Profile
+                                    span.m-nav__link-badge
+                                      span.m-badge.m-badge--success 2
+                            li.m-nav__item
+                              a.m-nav__link(href='profile.html')
+                                i.m-nav__link-icon.flaticon-share
+                                span.m-nav__link-text Activity
+                            li.m-nav__item
+                              a.m-nav__link(href='profile.html')
+                                i.m-nav__link-icon.flaticon-chat-1
+                                span.m-nav__link-text Messages
+                            li.m-nav__separator.m-nav__separator--fit
+                            li.m-nav__item
+                              a.m-nav__link(href='profile.html')
+                                i.m-nav__link-icon.flaticon-info
+                                span.m-nav__link-text FAQ
+                            li.m-nav__item
+                              a.m-nav__link(href='profile.html')
+                                i.m-nav__link-icon.flaticon-lifebuoy
+                                span.m-nav__link-text Support
+                            li.m-nav__separator.m-nav__separator--fit
+                            li.m-nav__item
+                              a.btn.m-btn--pill.btn-secondary.m-btn.m-btn--custom.m-btn--label-brand.m-btn--bolder(href='snippets/pages/user/login-1.html') Logout
+                li#m_quick_sidebar_toggle.m-nav__item
+                  a.m-nav__link.m-dropdown__toggle(href='#')
+                    span.m-nav__link-icon
+                      i.flaticon-grid-menu
+          // END: Topbar
+  // END: Header
+  // begin::Body
+  .m-grid__item.m-grid__item--fluid.m-grid.m-grid--ver-desktop.m-grid--desktop.m-body
+    // BEGIN: Left Aside
+    button#m_aside_left_close_btn.m-aside-left-close.m-aside-left-close--skin-dark
+      i.la.la-close
+    #m_aside_left.m-grid__item.m-aside-left.m-aside-left--skin-dark
+      // BEGIN: Aside Menu
+      #m_ver_menu.m-aside-menu.m-aside-menu--skin-dark.m-aside-menu--submenu-skin-dark(m-menu-vertical='1' m-menu-scrollable='0' m-menu-dropdown-timeout='500')
+        ul.m-menu__nav
+          li.m-menu__section.m-menu__section--first
+            h4.m-menu__section-text Departments
+            i.m-menu__section-icon.flaticon-more-v2
+          li.m-menu__item.m-menu__item--active(aria-haspopup='true')
+            a.m-menu__link(href='index.html')
+              span.m-menu__item-here
+              i.m-menu__link-icon.flaticon-line-graph
+              span.m-menu__link-text Job Orders
+          li.m-menu__item.m-menu__item--submenu(aria-haspopup='true' m-menu-submenu-toggle='hover')
+            a.m-menu__link.m-menu__toggle(href='javascript:;')
+              span.m-menu__item-here
+              i.m-menu__link-icon.flaticon-layers
+              span.m-menu__link-text Maintenance
+              i.m-menu__ver-arrow.la.la-angle-right
+            .m-menu__submenu
+              span.m-menu__arrow
+              ul.m-menu__subnav
+                li.m-menu__item.m-menu__item--parent(aria-haspopup='true')
+                  span.m-menu__link
+                    span.m-menu__item-here
+                    span.m-menu__link-text Resources
+                li.m-menu__item(aria-haspopup='true')
+                  a.m-menu__link(href='inner.html')
+                    i.m-menu__link-bullet.m-menu__link-bullet--dot
+                      span
+                    span.m-menu__link-text Services
+                li.m-menu__item(aria-haspopup='true' m-menu-link-redirect='1')
+                  a.m-menu__link(href='inner.html')
+                    i.m-menu__link-bullet.m-menu__link-bullet--dot
+                      span
+                    span.m-menu__link-text Devices
+                li.m-menu__item(aria-haspopup='true' m-menu-link-redirect='1')
+                  a.m-menu__link(href='inner.html')
+                    i.m-menu__link-bullet.m-menu__link-bullet--dot
+                      span
+                    span.m-menu__link-text Contacts
+      // END: Aside Menu
+    // END: Left Aside
+    .m-grid__item.m-grid__item--fluid.m-wrapper
+      // BEGIN: Subheader
+      .m-subheader
+        .d-flex.align-items-center
+          .mr-auto
+            h3.m-subheader__title.m-subheader__title--separator Technician Evaluation
+            ul.m-subheader__breadcrumbs.m-nav.m-nav--inline
+              li.m-nav__item.m-nav__item--home
+                a.m-nav__link.m-nav__link--icon(href='#')
+                  i.m-nav__link-icon.la.la-home
+              li.m-nav__separator -
+              li.m-nav__item
+                a.m-nav__link(href='')
+                  span.m-nav__link-text Transaction
+              li.m-nav__separator -
+              li.m-nav__item
+                a.m-nav__link(href='')
+                  span.m-nav__link-text Technician
+              li.m-nav__separator -
+              li.m-nav__item
+                a.m-nav__link(href='')
+                  span.m-nav__link-text Evaluation
+          div
+            .m-dropdown.m-dropdown--inline.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--align-push(m-dropdown-toggle='hover' aria-expanded='true')
+              a.m-portlet__nav-link.btn.btn-lg.btn-secondary.m-btn.m-btn--outline-2x.m-btn--air.m-btn--icon.m-btn--icon-only.m-btn--pill.m-dropdown__toggle(href='#')
+                i.la.la-plus.m--hide
+                i.la.la-ellipsis-h
+              .m-dropdown__wrapper
+                span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+                .m-dropdown__inner
+                  .m-dropdown__body
+                    .m-dropdown__content
+                      ul.m-nav
+                        li.m-nav__section.m-nav__section--first.m--hide
+                          span.m-nav__section-text Quick Actions
+                        li.m-nav__item
+                          a.m-nav__link(href='')
+                            i.m-nav__link-icon.flaticon-share
+                            span.m-nav__link-text Activity
+                        li.m-nav__item
+                          a.m-nav__link(href='')
+                            i.m-nav__link-icon.flaticon-chat-1
+                            span.m-nav__link-text Messages
+                        li.m-nav__item
+                          a.m-nav__link(href='')
+                            i.m-nav__link-icon.flaticon-info
+                            span.m-nav__link-text FAQ
+                        li.m-nav__item
+                          a.m-nav__link(href='')
+                            i.m-nav__link-icon.flaticon-lifebuoy
+                            span.m-nav__link-text Support
+                        li.m-nav__separator.m-nav__separator--fit
+                        li.m-nav__item
+                          a.btn.btn-outline-danger.m-btn.m-btn--pill.m-btn--wide.btn-sm(href='#') Submit
+      // END: Subheader
+      .m-content
+        .m-alert.m-alert--icon.m-alert--air.m-alert--square.alert.alert-dismissible.m--margin-bottom-30(role='alert')
+          .m-alert__icon
+            i.flaticon-exclamation.m--font-brand
+          .m-alert__text
+            | You can use the dom initialisation parameter to move DataTables features around the table to where you want them.
+            | See official documentation 
+            a(href='https://datatables.net/examples/advanced_init/dom_multiple_elements.html' target='_blank') here
+            | .
+        .m-portlet.m-portlet--mobile
+          .m-portlet__head
+            .m-portlet__head-caption
+              .m-portlet__head-title
+                h3.m-portlet__head-text
+                  | Multiple Controls
+            .m-portlet__head-tools
+              ul.m-portlet__nav
+                li.m-portlet__nav-item
+                  a.btn.btn-accent.m-btn.m-btn--custom.m-btn--icon.m-btn--air(href='#')
+                    span
+                      i.la.la-plus
+                      span New Record
+                li.m-portlet__nav-item
+                li.m-portlet__nav-item
+                  .m-dropdown.m-dropdown--inline.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--align-push(m-dropdown-toggle='hover' aria-expanded='true')
+                    a.m-portlet__nav-link.btn.btn-lg.btn-secondary.m-btn.m-btn--icon.m-btn--icon-only.m-btn--pill.m-dropdown__toggle(href='#')
+                      i.la.la-ellipsis-h.m--font-brand
+                    .m-dropdown__wrapper
+                      span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+                      .m-dropdown__inner
+                        .m-dropdown__body
+                          .m-dropdown__content
+                            ul.m-nav
+                              li.m-nav__section.m-nav__section--first
+                                span.m-nav__section-text Quick Actions
+                              li.m-nav__item
+                                a.m-nav__link(href='')
+                                  i.m-nav__link-icon.flaticon-share
+                                  span.m-nav__link-text Create Post
+                              li.m-nav__item
+                                a.m-nav__link(href='')
+                                  i.m-nav__link-icon.flaticon-chat-1
+                                  span.m-nav__link-text Send Messages
+                              li.m-nav__item
+                                a.m-nav__link(href='')
+                                  i.m-nav__link-icon.flaticon-multimedia-2
+                                  span.m-nav__link-text Upload File
+                              li.m-nav__section
+                                span.m-nav__section-text Useful Links
+                              li.m-nav__item
+                                a.m-nav__link(href='')
+                                  i.m-nav__link-icon.flaticon-info
+                                  span.m-nav__link-text FAQ
+                              li.m-nav__item
+                                a.m-nav__link(href='')
+                                  i.m-nav__link-icon.flaticon-lifebuoy
+                                  span.m-nav__link-text Support
+                              li.m-nav__separator.m-nav__separator--fit.m--hide
+                              li.m-nav__item.m--hide
+                                a.btn.btn-outline-danger.m-btn.m-btn--pill.m-btn--wide.btn-sm(href='#') Submit
+          .m-portlet__body
+            // begin: Datatable
+            table#evaluationTable.table.table-striped-.table-bordered.table-hover.table-checkable
+              thead
+                tr
+                  th Full Name
+                  th E-mail Address
+                  th Status
+                  th Actions
+              tbody
+                -if(technicians)
+                  -for(var i = 0; i < technicians.length; i++)
+                    tr.text-center
+                      td #{technicians[i].strTechnicianFirstName} #{technicians[i].strTechnicianLastName}
+                      td #{technicians[i].strTechnicianEmail}
+                      td
+                        .m-badge.m-badge--warning.m-badge--wide Evaluation
+                      td(nowrap='')
+                        button.technicianButton.m-portlet__nav-link.btn.m-btn.m-btn--hover-brand.m-btn--icon.m-btn--icon-only.m-btn--pill(technicianID=technicians[i].intTechnicianID title='View' data-toggle='modal' data-target='#technicianModal')
+                          i.la.la-eye
+        // END EXAMPLE TABLE PORTLET
+  // end:: Body
+
+  //- Modals - Begin
+  #technicianModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='modalTechnicianFullName' aria-hidden='true')
+    .modal-dialog.modal-xl(role='document')
+      .modal-content
+        .modal-header
+          h5#modalTechnicianFullName.modal-title
+          button.close(type='button' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+        .modal-body
+          .row
+            .col-md-4
+              #TechnicianField
+                table.table
+                  tbody
+                    tr
+                      th Full Name:
+                      td#infoFullName
+                    tr
+                      th Gender
+                      td#infoGender
+                    tr
+                      th E-mail Address
+                      td#infoEmail
+                    tr
+                      th Birthdate
+                      td#infoBirthdate
+                    tr
+                      th Cover Letter
+                      td
+                        .form-group.m-form__group
+                          textarea#infoCoverLetter.form-control.m-input(rows='6' readonly)
+                    tr
+                      th Schedule
+                      td
+                        .col-lg-12
+                          .input-group.date
+                            input#m_datetimepicker_2.scheduleDate.form-control.m-input(type='text' readonly='' placeholder='Select Schedule')
+                            .input-group-append
+                              span.input-group-text
+                                i.la.la-calendar-check-o.glyphicon-th
+
+
+            .col-md-8
+              #ResumePDF
+          
+        .modal-footer
+          button#reject.btn.btn-secondary(type='button' data-dismiss='modal') Reject
+          button#confirm.btn.btn-primary(type='button') Confirm
+  //- Modal- end
+
+
+
+  // begin::Footer
+  footer.m-grid__item.m-footer
+    .m-container.m-container--fluid.m-container--full-height.m-page__container
+      .m-stack.m-stack--flex-tablet-and-mobile.m-stack--ver.m-stack--desktop
+        .m-stack__item.m-stack__item--left.m-stack__item--middle.m-stack__item--last
+          span.m-footer__copyright
+            | 2017 &copy; Metronic theme by 
+            a.m-link(href='https://keenthemes.com') Keenthemes
+        .m-stack__item.m-stack__item--right.m-stack__item--middle.m-stack__item--first
+          ul.m-footer__nav.m-nav.m-nav--inline.m--pull-right
+            li.m-nav__item
+              a.m-nav__link(href='#')
+                span.m-nav__link-text About
+            li.m-nav__item
+              a.m-nav__link(href='#')
+                span.m-nav__link-text Privacy
+            li.m-nav__item
+              a.m-nav__link(href='#')
+                span.m-nav__link-text T&amp;C
+            li.m-nav__item
+              a.m-nav__link(href='#')
+                span.m-nav__link-text Purchase
+            li.m-nav__item.m-nav__item
+              a.m-nav__link(href='#' data-toggle='m-tooltip' title='Support Center' data-placement='left')
+                i.m-nav__link-icon.flaticon-info.m--icon-font-size-lg3
+  // end::Footer
+// end:: Page
+// begin::Quick Sidebar
+#m_quick_sidebar.m-quick-sidebar.m-quick-sidebar--tabbed.m-quick-sidebar--skin-light
+  .m-quick-sidebar__content.m--hide
+    span#m_quick_sidebar_close.m-quick-sidebar__close
+      i.la.la-close
+    ul#m_quick_sidebar_tabs.nav.nav-tabs.m-tabs.m-tabs-line.m-tabs-line--brand(role='tablist')
+      li.nav-item.m-tabs__item
+        a.nav-link.m-tabs__link.active(data-toggle='tab' href='#m_quick_sidebar_tabs_messenger' role='tab') Messages
+      li.nav-item.m-tabs__item
+        a.nav-link.m-tabs__link(data-toggle='tab' href='#m_quick_sidebar_tabs_settings' role='tab') Settings
+      li.nav-item.m-tabs__item
+        a.nav-link.m-tabs__link(data-toggle='tab' href='#m_quick_sidebar_tabs_logs' role='tab') Logs
+    .tab-content
+      #m_quick_sidebar_tabs_messenger.tab-pane.active(role='tabpanel')
+        .m-messenger.m-messenger--message-arrow.m-messenger--skin-light
+          .m-messenger__messages.m-scrollable
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--in
+                .m-messenger__message-pic
+                  img(src='/pages/demo12/assets/app/media/img//users/user3.jpg' alt='')
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-username
+                      | Megan wrote
+                    .m-messenger__message-text
+                      | Hi Bob. What time will be the meeting ?
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--out
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-text
+                      | Hi Megan. It&apos;s at 2.30PM
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--in
+                .m-messenger__message-pic
+                  img(src='/pages/demo12/assets/app/media/img//users/user3.jpg' alt='')
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-username
+                      | Megan wrote
+                    .m-messenger__message-text
+                      | Will the development team be joining ?
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--out
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-text
+                      | Yes sure. I invited them as well
+            .m-messenger__datetime 2:30PM
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--in
+                .m-messenger__message-pic
+                  img(src='/pages/demo12/assets/app/media/img//users/user3.jpg' alt='')
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-username
+                      | Megan wrote
+                    .m-messenger__message-text
+                      | Noted. For the Coca-Cola Mobile App project as well ?
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--out
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-text
+                      | Yes, sure.
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--out
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-text
+                      | Please also prepare the quotation for the Loop CRM project as well.
+            .m-messenger__datetime 3:15PM
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--in
+                .m-messenger__message-no-pic.m--bg-fill-danger
+                  span M
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-username
+                      | Megan wrote
+                    .m-messenger__message-text
+                      | Noted. I will prepare it.
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--out
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-text
+                      | Thanks Megan. I will see you later.
+            .m-messenger__wrapper
+              .m-messenger__message.m-messenger__message--in
+                .m-messenger__message-pic
+                  img(src='/pages/demo12/assets/app/media/img//users/user3.jpg' alt='')
+                .m-messenger__message-body
+                  .m-messenger__message-arrow
+                  .m-messenger__message-content
+                    .m-messenger__message-username
+                      | Megan wrote
+                    .m-messenger__message-text
+                      | Sure. See you in the meeting soon.
+          .m-messenger__seperator
+          .m-messenger__form
+            .m-messenger__form-controls
+              input.m-messenger__form-input(type='text' name='' placeholder='Type here...')
+            .m-messenger__form-tools
+              a.m-messenger__form-attachment(href='')
+                i.la.la-paperclip
+      #m_quick_sidebar_tabs_settings.tab-pane(role='tabpanel')
+        .m-list-settings.m-scrollable
+          .m-list-settings__group
+            .m-list-settings__heading General Settings
+            .m-list-settings__item
+              span.m-list-settings__item-label Email Notifications
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' checked='checked' name='')
+                    span
+            .m-list-settings__item
+              span.m-list-settings__item-label Site Tracking
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' name='')
+                    span
+            .m-list-settings__item
+              span.m-list-settings__item-label SMS Alerts
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' name='')
+                    span
+            .m-list-settings__item
+              span.m-list-settings__item-label Backup Storage
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' name='')
+                    span
+            .m-list-settings__item
+              span.m-list-settings__item-label Audit Logs
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' checked='checked' name='')
+                    span
+          .m-list-settings__group
+            .m-list-settings__heading System Settings
+            .m-list-settings__item
+              span.m-list-settings__item-label System Logs
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' name='')
+                    span
+            .m-list-settings__item
+              span.m-list-settings__item-label Error Reporting
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' name='')
+                    span
+            .m-list-settings__item
+              span.m-list-settings__item-label Applications Logs
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' name='')
+                    span
+            .m-list-settings__item
+              span.m-list-settings__item-label Backup Servers
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' checked='checked' name='')
+                    span
+            .m-list-settings__item
+              span.m-list-settings__item-label Audit Logs
+              span.m-list-settings__item-control
+                span.m-switch.m-switch--outline.m-switch--icon-check.m-switch--brand
+                  label
+                    input(type='checkbox' name='')
+                    span
+      #m_quick_sidebar_tabs_logs.tab-pane(role='tabpanel')
+        .m-list-timeline.m-scrollable
+          .m-list-timeline__group
+            .m-list-timeline__heading
+              | System Logs
+            .m-list-timeline__items
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='')
+                  | 12 new users registered 
+                  span.m-badge.m-badge--warning.m-badge--wide important
+                span.m-list-timeline__time Just now
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='') System shutdown
+                span.m-list-timeline__time 11 mins
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-danger
+                a.m-list-timeline__text(href='') New invoice received
+                span.m-list-timeline__time 20 mins
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-warning
+                a.m-list-timeline__text(href='')
+                  | Database overloaded 89% 
+                  span.m-badge.m-badge--success.m-badge--wide resolved
+                span.m-list-timeline__time 1 hr
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='') System error
+                span.m-list-timeline__time 2 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='')
+                  | Production server down 
+                  span.m-badge.m-badge--danger.m-badge--wide pending
+                span.m-list-timeline__time 3 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='') Production server up
+                span.m-list-timeline__time 5 hrs
+          .m-list-timeline__group
+            .m-list-timeline__heading
+              | Applications Logs
+            .m-list-timeline__items
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='')
+                  | New order received 
+                  span.m-badge.m-badge--info.m-badge--wide urgent
+                span.m-list-timeline__time 7 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='') 12 new users registered
+                span.m-list-timeline__time Just now
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='') System shutdown
+                span.m-list-timeline__time 11 mins
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-danger
+                a.m-list-timeline__text(href='') New invoices received
+                span.m-list-timeline__time 20 mins
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-warning
+                a.m-list-timeline__text(href='') Database overloaded 89%
+                span.m-list-timeline__time 1 hr
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='')
+                  | System error 
+                  span.m-badge.m-badge--info.m-badge--wide pending
+                span.m-list-timeline__time 2 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='') Production server down
+                span.m-list-timeline__time 3 hrs
+          .m-list-timeline__group
+            .m-list-timeline__heading
+              | Server Logs
+            .m-list-timeline__items
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='') Production server up
+                span.m-list-timeline__time 5 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='') New order received
+                span.m-list-timeline__time 7 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='') 12 new users registered
+                span.m-list-timeline__time Just now
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='') System shutdown
+                span.m-list-timeline__time 11 mins
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-danger
+                a.m-list-timeline__text(href='') New invoice received
+                span.m-list-timeline__time 20 mins
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-warning
+                a.m-list-timeline__text(href='') Database overloaded 89%
+                span.m-list-timeline__time 1 hr
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='') System error
+                span.m-list-timeline__time 2 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='') Production server down
+                span.m-list-timeline__time 3 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-success
+                a.m-list-timeline__text(href='') Production server up
+                span.m-list-timeline__time 5 hrs
+              .m-list-timeline__item
+                span.m-list-timeline__badge.m-list-timeline__badge--state-info
+                a.m-list-timeline__text(href='') New order received
+                span.m-list-timeline__time 1117 hrs
+// end::Quick Sidebar
+// begin::Scroll Top
+#m_scroll_top.m-scroll-top
+  i.la.la-arrow-up
+// end::Scroll Top
+// begin::Quick Nav
+ul.m-nav-sticky(style='margin-top: 30px;')
+  li.m-nav-sticky__item(data-toggle='m-tooltip' title='Purchase' data-placement='left')
+    a(href='https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes' target='_blank')
+      i.la.la-cart-arrow-down
+  li.m-nav-sticky__item(data-toggle='m-tooltip' title='Documentation' data-placement='left')
+    a(href='https://keenthemes.com/metronic/documentation.html' target='_blank')
+      i.la.la-code-fork
+  li.m-nav-sticky__item(data-toggle='m-tooltip' title='Support' data-placement='left')
+    a(href='https://keenthemes.com/forums/forum/support/metronic5/' target='_blank')
+      i.la.la-life-ring
+// begin::Quick Nav
+// begin:: Global Mandatory Vendors
+script(src='/vendors/jquery/dist/jquery.js' type='text/javascript')
+script(src='/vendors/popper.js/dist/umd/popper.js' type='text/javascript')
+script(src='/vendors/bootstrap/dist/js/bootstrap.min.js' type='text/javascript')
+script(src='/vendors/js-cookie/src/js.cookie.js' type='text/javascript')
+script(src='/vendors/moment/min/moment.min.js' type='text/javascript')
+script(src='/vendors/tooltip.js/dist/umd/tooltip.min.js' type='text/javascript')
+script(src='/vendors/perfect-scrollbar/dist/perfect-scrollbar.js' type='text/javascript')
+script(src='/vendors/wnumb/wNumb.js' type='text/javascript')
+// end:: Global Mandatory Vendors
+// begin:: Global Optional Vendors
+script(src='/vendors/jquery.repeater/src/lib.js' type='text/javascript')
+script(src='/vendors/jquery.repeater/src/jquery.input.js' type='text/javascript')
+script(src='/vendors/jquery.repeater/src/repeater.js' type='text/javascript')
+script(src='/vendors/jquery-form/dist/jquery.form.min.js' type='text/javascript')
+script(src='/vendors/block-ui/jquery.blockUI.js' type='text/javascript')
+script(src='/vendors/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-datepicker.init.js' type='text/javascript')
+script(src='/vendors/bootstrap-datetime-picker/js/bootstrap-datetimepicker.min.js' type='text/javascript')
+script(src='/vendors/bootstrap-timepicker/js/bootstrap-timepicker.min.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-timepicker.init.js' type='text/javascript')
+script(src='/vendors/bootstrap-daterangepicker/daterangepicker.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-daterangepicker.init.js' type='text/javascript')
+script(src='/vendors/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js' type='text/javascript')
+script(src='/vendors/bootstrap-maxlength/src/bootstrap-maxlength.js' type='text/javascript')
+script(src='/vendors/bootstrap-switch/dist/js/bootstrap-switch.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-switch.init.js' type='text/javascript')
+script(src='/vendors/vendors/bootstrap-multiselectsplitter/bootstrap-multiselectsplitter.min.js' type='text/javascript')
+script(src='/vendors/bootstrap-select/dist/js/bootstrap-select.js' type='text/javascript')
+script(src='/vendors/select2/dist/js/select2.full.js' type='text/javascript')
+script(src='/vendors/typeahead.js/dist/typeahead.bundle.js' type='text/javascript')
+script(src='/vendors/handlebars/dist/handlebars.js' type='text/javascript')
+script(src='/vendors/inputmask/dist/jquery.inputmask.bundle.js' type='text/javascript')
+script(src='/vendors/inputmask/dist/inputmask/inputmask.date.extensions.js' type='text/javascript')
+script(src='/vendors/inputmask/dist/inputmask/inputmask.numeric.extensions.js' type='text/javascript')
+script(src='/vendors/inputmask/dist/inputmask/inputmask.phone.extensions.js' type='text/javascript')
+script(src='/vendors/nouislider/distribute/nouislider.js' type='text/javascript')
+script(src='/vendors/owl.carousel/dist/owl.carousel.js' type='text/javascript')
+script(src='/vendors/autosize/dist/autosize.js' type='text/javascript')
+script(src='/vendors/clipboard/dist/clipboard.min.js' type='text/javascript')
+script(src='/vendors/ion-rangeslider/js/ion.rangeSlider.js' type='text/javascript')
+script(src='/vendors/dropzone/dist/dropzone.js' type='text/javascript')
+script(src='/vendors/summernote/dist/summernote.js' type='text/javascript')
+script(src='/vendors/markdown/lib/markdown.js' type='text/javascript')
+script(src='/vendors/bootstrap-markdown/js/bootstrap-markdown.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/bootstrap-markdown.init.js' type='text/javascript')
+script(src='/vendors/jquery-validation/dist/jquery.validate.js' type='text/javascript')
+script(src='/vendors/jquery-validation/dist/additional-methods.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/forms/jquery-validation.init.js' type='text/javascript')
+script(src='/vendors/bootstrap-notify/bootstrap-notify.min.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/base/bootstrap-notify.init.js' type='text/javascript')
+script(src='/vendors/toastr/build/toastr.min.js' type='text/javascript')
+script(src='/vendors/jstree/dist/jstree.js' type='text/javascript')
+script(src='/vendors/raphael/raphael.js' type='text/javascript')
+script(src='/vendors/morris.js/morris.js' type='text/javascript')
+script(src='/vendors/chartist/dist/chartist.js' type='text/javascript')
+script(src='/vendors/chart.js/dist/Chart.bundle.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/charts/chart.init.js' type='text/javascript')
+script(src='/vendors/vendors/bootstrap-session-timeout/dist/bootstrap-session-timeout.min.js' type='text/javascript')
+script(src='/vendors/vendors/jquery-idletimer/idle-timer.min.js' type='text/javascript')
+script(src='/vendors/waypoints/lib/jquery.waypoints.js' type='text/javascript')
+script(src='/vendors/counterup/jquery.counterup.js' type='text/javascript')
+script(src='/vendors/es6-promise-polyfill/promise.min.js' type='text/javascript')
+script(src='/vendors/sweetalert2/dist/sweetalert2.min.js' type='text/javascript')
+script(src='/vendors/js/framework/components/plugins/base/sweetalert2.init.js' type='text/javascript')
+// end:: Global Optional Vendors
+// begin::Global Theme Bundle
+script(src='/pages/demo12/assets/demo/base/scripts.bundle.js' type='text/javascript')
+// end::Global Theme Bundle
+// begin::Page Vendors
+script(src='/pages/demo12/assets/vendors/custom/fullcalendar/fullcalendar.bundle.js' type='text/javascript')
+script(src='/default/assets/vendors/custom/datatables/datatables.bundle.js' type='text/javascript')
+script(src='/default/assets/demo/custom/crud/forms/widgets/bootstrap-datetimepicker.js' type='text/javascript')
+
+// end::Page Vendors
+// begin::Page Scripts
+script(src='/pages/demo12/assets/app/js/dashboard.js' type='text/javascript')
+script(src='/assets/vendors/custom/jquery.form.js' type='text/javascript')
+script(src='/assets/vendors/custom/sweetalert.js' type='text/javascript')
+script(src='/assets/vendors/custom/formValidation.js' type='text/javascript')
+script(src='/assets/vendors/custom/bootstrapValidation.js' type='text/javascript')
+script(src='/default/assets/demo/custom/crud/datatables/advanced/multiple-controls.js' type='text/javascript')
+script(src='/default/assets/demo/custom/crud/forms/widgets/bootstrap-datepicker.js' type='text/javascript')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.js' type='text/javascript')
+// end::Page Scripts
+// end::Body
+script.
+  $(document).ready(function(){
+
+    $('#evaluationTable').dataTable( { "oLanguage": { "sEmptyTable": `<h3>No technician to be evaluated.<h3>` } } );
+
+    
+
+
+    $(document).on('click', '.technicianButton', function(){
+      var intTechnicianID = $(this).attr('technicianID');
+      var $this = $(this).parents('tr')
+
+
+
+      $(document).on('click', '#reject', function(){
+        $(document).off('click', '#confirm');
+        $(document).off('click', '#reject');
+        var intTechnicianID = $(this).attr('technicianID');
+        $.post('/management/technician/reject', {
+            intTechnicianID: intTechnicianID,
+          }).then(function(data){
+            if(data.message === "Success"){
+              swal({
+                title: 'Technician Rejected',
+                text: 'The technician has been successfully rejected.',
+                icon: 'success',
+                button: 'Okay',
+              })
+
+              var table = $('#evaluationTable').DataTable();
+              console.log($this);
+              console.log($this);
+              table.row( $this )
+                    .remove()
+                    .draw();
+
+            }
+            else{
+              swal({
+                title: 'Uh-oh',
+                text: 'Scheduling Error. Please contact the administrator.',
+                icon: 'error',
+                button: 'Okay',
+              })
+            }
+          })
+      })
+
+      $(document).on('click', '#confirm', function(){
+        
+        var scheduleDate = $('.scheduleDate').val();
+        if(scheduleDate == ""){
+          swal({
+            title: 'Uh-oh!',
+            text: 'Please set the schedule date.',
+            icon: 'error',
+            button: 'Okay',
+          })
+        }
+        else{
+          $(document).off('click', '#confirm');
+          $(document).off('click', '#reject');
+          var intTechnicianID = $(this).attr('technicianID');
+          var datScheduleDate = $('.scheduleDate').val();
+          $.post('/management/technician/scheduled', {
+            intTechnicianID: intTechnicianID,
+            datScheduleDate: datScheduleDate,
+          }).then(function(data){
+            if(data.message === "Success"){
+              swal({
+                title: 'Success',
+                text: 'The technician has been successfully scheduled.',
+                icon: 'success',
+                button: 'Okay',
+              })
+
+              var table = $('#evaluationTable').DataTable();
+              console.log($this);
+              console.log($this);
+              table.row( $this )
+                  .remove()
+                  .draw();
+              $('#technicianModal').modal('toggle');
+            }
+            else{
+              swal({
+                title: 'Uh-oh',
+                text: 'Scheduling Error. Please contact the administrator.',
+                icon: 'error',
+                button: 'Okay',
+              })
+            }
+          })
+        }
+      })
+
+      $.post('/management/technician/information', {
+        intTechnicianID: intTechnicianID,
+      }).then(function(data){
+        if(data.message === 'Success'){
+          var technicianInfo = data.technician;
+          $('#modalTechnicianFullName').text(technicianInfo.strTechnicianFirstName+' '+technicianInfo.strTechnicianLastName);
+          $('#infoFullName').text(technicianInfo.strTechnicianFirstName+' '+technicianInfo.strTechnicianLastName)
+          $('#infoGender').text(technicianInfo.strTechnicianGender)
+          $('#infoEmail').text(technicianInfo.strTechnicianEmail)
+          $('#infoBirthdate').text(technicianInfo.datTechnicianBirthday)
+          $('#infoCoverLetter').val(technicianInfo.strTechnicianCoverLetter)
+          $('#reject').attr('technicianID', technicianInfo.intTechnicianID)
+          $('#confirm').attr('technicianID', technicianInfo.intTechnicianID)
+          //- Resume Viewer
+          PDFObject.embed(`/assets/uploads/${technicianInfo.strTechnicianResume}`, "#ResumePDF");
+        }
+        else{
+          console.log('No Record Found');
+          swal({
+            title: 'No Record Found!',
+            icon: 'error',
+            button: 'Okay',
+          })
+        }
+      })
+    })
+  })

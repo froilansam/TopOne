@@ -1,0 +1,11 @@
+---Schedule---
+Waiting: Hindi pa dumadating.
+Attended: Dumating
+Cancelled: Kinansela
+Ditch: Hindi sumipot
+
+--Evaluation--
+Evaluation
+Reject
+Schedule
+Hired
